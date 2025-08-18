@@ -1,4 +1,4 @@
-# - Tipos de datos
+# - Video: Tipos de datos
 
 # Se cuenta desde cero
 
@@ -46,9 +46,9 @@ print(nombre_materia)
 nombre_corto = nombre[5:8:2] # me. Empieza desde el 5 INCLUIDO, hasta la 8 INCLUIDO. SALTANDO cada 2 letras
 print(nombre_corto)
 
-# Tipos de datos -
+#  Video: Tipos de datos -
 
-# - Ingreso de datos por el usuario
+# - Video: Ingreso de datos por el usuario
 
 # Funcion input() - Hace que el programa se quede esperando a que el usuario ingrese un valor
 # Acá no es cómo en js que para pedir un dato tengo que ejecutarlo en el navegador, lo ingreso por la terminal
@@ -76,11 +76,10 @@ suma = numero + numero2
 print(suma) # 15 ---> suma ✅
 """
 
-# Ingreso de datos por el usuario - 
+# Video: Ingreso de datos por el usuario - 
 
-# - Funciones
+# - Video: Funciones
 
-# Funciones -
 # Buena practica. Documentar que recibe la fn, que hace, fin, porque se creo. Condicion que debe cumplir los parametros para que funcione
 def saludar(nombre):
     print("Holaa! " + nombre)
@@ -100,6 +99,7 @@ resultado_suma = suma(5, 9)
 print(resultado_suma)
 """
 
+# Recibe 2 numeros y devuelve la suma de ellos
 def suma_resta(numero1, numero2):
     suma = numero1 + numero2
     resta = numero1 - numero2
@@ -107,6 +107,14 @@ def suma_resta(numero1, numero2):
 
 # suma, resta =  suma_resta(10, 9) # Esta manera NO está mal, es posible de usar. Porque estas suma y resta viven en un ambito distinto a las de la funcion. La de la funcion nacio y murió en la funcion. 
 a, b =  suma_resta(10, 9) # 'a' es el primer valor que retorna la funcion y 'b' el 2do valor. Confunde, asique es mejor diferenciarlas de alguna manera
-
+# Si la funcion devuelve un valor hay que guardarlo en algun lado. eso es a, b+
 print(a, b)
+
+
+# Video: Funciones -
+
+
+
+
+
 
