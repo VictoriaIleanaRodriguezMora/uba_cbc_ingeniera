@@ -116,7 +116,7 @@ range(15,10,-1) # 15, 14, 13, 12, 11
 
 # ✅ Código con rangos y for
 # Consigna: Contemos cuántos múltiplos de 3 ingresan en un lote de 5 números
-# """
+"""
 total_multiplos = 0;
 condicion_de_corte = 0;
 range_c = range(1, 6)
@@ -126,29 +126,25 @@ for range_item in range_c:
         total_multiplos += 1
 print("Total números múltiplos de 3 ingresados: ", total_multiplos)
 
-# """
-
-
-
-
-
-
-
-
 """
-a = range(2, 4//2+1);
-print(a)
-num = int(input('Ingresá un número entero positivo: '))
-while num <= 0:
-    num = int(input('Ingresá un número entero positivo: '))
-    cant_divisores = 0
-    for d in range(2, num//2+1):
-        if num % d == 0:
-            cant_divisores += 1
-            print(num,'tiene',cant_divisores,'divisores')
+
+# 4. Bucles anidados
+# Calcular los divisores de un nro
+# Condiciones: * El nro a evaluar, no puede ser cero. Cero no tiene divisores
+""" 
+num_user = int(input("Ingresa un numero natural mayor a cero: "))
+while(num_user > 0):
+    cantidad_de_divisores = 0;
+    mitad_de_num_user = num_user // 2;
+    # El rango, no incluye el final. Osea, yo ingreso 8 // 2, y eso da 4. Pero al recorrer no está llegando a 4, porque range no lo incluye. Tengo que sumarle 1
+    rango_de_nros_a_evaluar = range(2, mitad_de_num_user + 1)
+    for num in rango_de_nros_a_evaluar:
+        print(f"****num {num}")
+        if num_user % num == 0:
+            cantidad_de_divisores += 1
+            print(f"{num_user} % {num}: {num_user % num}")
+            print("cantidad_de_divisores += 1: ", cantidad_de_divisores)
+    print(f"Total divisores de {num_user}: {cantidad_de_divisores}. Sin incluir a sí mismo y a 1.")
+    num_user = int(input("Ingresa un numero natural mayor a cero: "))
+print(f"Ingresaste un número menor a cero: {num_user}. Saliste del bucle")
 """
-         
-
-
-
-
