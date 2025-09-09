@@ -42,9 +42,18 @@ puntos = [
     (0, 0),
 ]
 
+# append - agregar elementos al final
+puntos.append((99, 99))
+
+# insert(posicion, valor). Mueve todo el arreglo, para insertar en la posicion que yo le digo
+puntos.insert(5, (88, 88))
+
+# puntos.remove((elemento a borrar)) - tiene que existir 
+puntos.remove((0, 0))
+
 for punto in puntos:
     # Punto es la posicion 0, 1, ... de puntos
     x, y = punto # x, y es la desestructuracion de la posicion[0], posicion[1]
     print("x: ", x, "y: ", y)
 
-
+# Todo esto se puede hacer, porque estoy manipulando una lista. Las listas son mutables. Esto no lo podria hacer con una tupla. 
