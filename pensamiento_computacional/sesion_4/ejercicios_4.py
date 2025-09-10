@@ -1,9 +1,28 @@
+from random import randint # random int
+
 # Secuencias, tuplas y listas Unidad 4
 
 # Familiarización con secuencias
-# 1. Crear una lista con los números del 1 al 10. Acceder con el índice a la posición que contiene el número 5, e imprimirlo por pantalla. Recordar que el índice de las listas empiezan con 0.
-# 2. Con la lista del punto anterior, usar la función len() para averiguar su longitud, e imprimirla.
+# ✅ 1. Crear una lista con los números del 1 al 10. Acceder con el índice a la posición que contiene el número 5, e imprimirlo por pantalla. Recordar que el índice de las listas empiezan con 0.
+
+# ❗Un objeto range es una secuencia inmutable de números que se usa comúnmente en bucles, pero no es una lista en sí misma. list(range())
+# ❌ Esto así: list_01 = [list(range(1, 11))] da: [[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]] NO quiero eso
+list_01 = list(range(1, 11)) # 1 - 10 | ÍNDICES 0 - 9
+print("list_01[4] -->", list_01[4])
+
+# 2.✅ Con la lista del punto anterior, usar la función len() para averiguar su longitud, e imprimirla.
+print("len(list_01) -->", len(list_01))
+
 # 3. Crear una secuencia con números distintos, y luego devolver el elemento máximo y el mínimo.
+tupla_03 = []
+tupla_03_bis = ()
+for i in range(0, 15):
+    tupla_03.append(randint(1,35))
+print("tupla_03 -->", tupla_03)
+print("min(tupla_03) -->", min(tupla_03))
+print("max(tupla_03) -->", max(tupla_03))
+
+
 # 4. Ordenar la secuencia del ejercicio anterior, e imprimirla por pantalla. (ver funciones de listas)
 # 5. Crear una tupla que guarde tu nombre y tu edad. Luego, imprimir por pantalla tu edad, accediendo al elemento de la tupla que corresponda.
 # 6. Hacer una lista con 5 nombres, y realizar las siguientes actividades con la misma:
