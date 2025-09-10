@@ -15,4 +15,10 @@ Las secuencias de tipo string, son INMUTABLES, no cambian.
 - Puedo cambiar un elemento, agregar o quitar. 
 - Pueden contener distintos tipos de datos
 
+## Ordenar listas en Python: Como ordenar por descendente o ascendente.
+https://www.freecodecamp.org/espanol/news/ordenar-listas-en-python-como-ordenar-por-descendente-o-ascendente/ 
 
+**Una diferencia clave entre sort() y sorted() es que sorted() retornará una nueva lista, mientras que  sort() ordena la lista en su lugar.**
+
+![alt text](image.png)
+https://elcodigoascii.com.ar/

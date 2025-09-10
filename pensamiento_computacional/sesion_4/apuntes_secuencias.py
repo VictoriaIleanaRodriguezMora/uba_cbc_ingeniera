@@ -86,21 +86,93 @@ for n in a[:10]:
 print()
 '''
 
+# 1.3.1. Métodos Específicos de la clase list (Lista)
+"""
+miLista = [7, 5, 6, 7]
+
+# append(valor) Agrega el elemento valor al final de la lista. 
+miLista.append(5)
+
+# insert(posic,valor) Inserta el elemento valor en la posición posic. 
+miLista.insert(2, 10)
+
+# remove(valor) Quita de la lista el elemento valor. 
+miLista.remove(7)
+
+# pop([índice]) Quita de la lista el elemento de la posición índice. 
+valor = miLista.pop(3)
+
+# extend(otraLista) Agrega los elementos de otraLista al final de la lista.
+miLista.extend([8, 9, 10])
+print("extend --> ", miLista)
+
+# Una diferencia clave entre sort() y sorted() es que sorted() retornará una nueva lista, mientras que  sort() ordena la lista en su lugar.
+# Otra diferencia clave entre sorted() y sort() es que el método sorted() acepta cualquier elemento iterable, mientras que el métodosort() acepta únicamente listas.
+# sort() Ordena la lista. 
+miLista.sort()
+print("sort --> ", miLista)
+
+# sorted() Devuelve una nueva lista ordenada (sin modifi car la original).
+lista_ordenada = sorted(miLista)
+
+# reverse() Invierte el orden de la lista. * puede que este método no esté habilitado para su uso en la herramienta replit. En ese caso, se recomienda este sustituto:
+miLista[::-1]
+miLista.reverse()
+
+
+# count(valor) Cuenta la cantidad de apariciones de valor en la lista. Este método es válido para cualquier secuencia.
+cantidad = miLista.count(5)
+
+# index(valor) Devuelve el índice de la primera aparición de valor. Este método es válido para cualquier secuencia.
+indice = miLista.index(8)
+
+# len() Devuelve la longitud de la lista. Este método es válido para cualquier secuencia.
+longitud = len(miLista)
+
+# clear() Elimina todos los elementos de la lista. Otra opción es pisar el valor de la lista con una lista vacía: miLista = []
+miLista.clear()
+
+# copy() Crea una copia superficial de la lista. 
+copia = miLista.copy()
+
+# max() Devuelve el valor máximo de la lista. 
+maximo = max(miLista)
+
+# min() Devuelve el valor mínimo de la lista. 
+minimo = min(miLista)
+
+# sum() Devuelve la suma de los elementos de la lista. 
+suma = sum(miLista)
+"""
+
+
+# ------- sorted -------
+
+
+
+
+
+
+
+
+
+
 # 1.6 Métodos de la secuencia str
 # capitalize() Devuelve el string con la primera letra en mayúscula.
 print("hola".capitalize())
 
-# center(ancho[,relleno]) Devuelve el string centrado con relleno a los costados.
+# center(ancho, relleno) Devuelve el string centrado con relleno a los costados. El ancho, es el ancho total del string final, relleno. Se rellena con 'relleno'
 print("Python".center(10, "*"))
 
 # count(valor) Devuelve la cantidad de veces que aparece "valor" en el string.
 print("banana".count("a"))
 
-# fi nd(substring[,desde[,hasta]]) Devuelve la primera posición de comienzo del substring en el string.
-print("python".find("th"))
+# find(substring[,desde[,hasta]]) Devuelve la primera posición de comienzo del substring en el string.
+print("find", ("python".find("th", 1, 4)))
+print("find", ("python".find("th", 0, 1))) # -1
 
-# rfi nd(substring[,desde[,hasta]]) Devuelve la última posición de comienzo del substring en el string.
-print("python programming".rfind("ing"))
+# rfind(substring[,desde[,hasta]]) Devuelve la última posición de comienzo del substring en el string.
+print("rfind", "python programming".rfind("ing"))
 
 # format(args,*) Devuelve el string formateado con valores sustituidos.
 print("Mi nombre es {} y tengo {} años".format("Juan", 25))
@@ -111,7 +183,7 @@ print("hola".upper())
 # lower() Devuelve el string en minúsculas.
 print("Hola".lower())
 
-# strip() Devuelve el string sin espacios en blanco al inicio y al fi nal.
+# strip() Devuelve el string sin espacios en blanco al inicio y al final.
 print(" Python ".strip())
 
 # replace(viejo, nuevo) Devuelve el string con todas las apariciones de "viejo" reemplazadas por "nuevo".
@@ -135,9 +207,6 @@ print("Hello, World!".startswith("Hello"))
 # rindex(substring[,desde[,hasta]] ) Devuelve la última posición de comienzo del substring en el string.
 print("python programming".rindex("ing"))
 
-# join(iterable) Devuelve un string que es la concatenación de los elementos en el iterable, intercalados con el string.
-print("Python".ljust(10, "-"))
-
 # ljust(ancho[,relleno]) Justifica el string hacia la izquierda con relleno.
 print("Python".ljust(10, "-"))
 
@@ -145,17 +214,9 @@ print("Python".ljust(10, "-"))
 print("Python".rjust(10, "-"))
 
 # maketrans(x[,y[,z]]) Asocia # en un diccionario los correspondientes caracteres de las cadenas x e y.
-print(str.maketrans("aeiou", "12345")) 
+# {97: 49, 101: 50, 105: 51, 111: 52, 117: 53} es la representacion asci de "aeiou", "12345" 
+a = str.maketrans("aeiou", "12345")
+print("str.maketrans", str.maketrans("aeiou", "12345")) 
 
 # Devuelve el string con los caracteres asociados en el diccionario pares reemplazados.
-print("hello".translate(str.maketrans("aeiou", "12345")))
-
-
-
-
-
-
-
-
-
-
+print("hello".translate(a))
