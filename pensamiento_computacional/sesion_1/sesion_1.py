@@ -41,6 +41,9 @@ print(“¡Hola mundo!”) y darle play (Run).
 en cuenta esto y recordando el concepto de variable que se estudió esta semana, guardar el
 texto “¡Hola mundo!” en una variable e imprimir el texto usando esa variable.
 
+variableEjercicio = '¡Hola mundo!'
+print(variableEjercicio)
+
 9. Crear otro programa que guarde un número en una variable, y luego lo imprima por pantalla,
 como hicimos con el “¡Hola mundo!” del ejercicio 2, sólo que ahora hay que poner el nombre
 de la variable en lugar del “¡Hola mundo!”.
@@ -48,5 +51,16 @@ de la variable en lugar del “¡Hola mundo!”.
 10. Vamos con otro un poco más complejo. Para el siguiente programa a realizar, se pide hacer
 dos variables que guarden dentro números, y luego sumarlos. El resultado se tendrá que
 guardar en otra variable, y luego imprimir este resultado. Es decir:
+numA = 2
+numB = 5
+rtado = numA + numB
+print(rtado)
 """
-print("hola mundo")
+
+numA = 2
+numB = 5
+rtado = numA + numB
+print(rtado)
+
+variableEjercicio = '¡Hola mundo!'
+print(variableEjercicio)
