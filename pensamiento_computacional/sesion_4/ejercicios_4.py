@@ -24,7 +24,13 @@ print("max(tupla_03) -->", max(tupla_03))
 
 
 # 4. Ordenar la secuencia del ejercicio anterior, e imprimirla por pantalla. (ver funciones de listas)
+tupla_03_ordenada = sorted(tupla_03)
+print("tupla_03_ordenada -->", tupla_03_ordenada)
+
 # 5. Crear una tupla que guarde tu nombre y tu edad. Luego, imprimir por pantalla tu edad, accediendo al elemento de la tupla que corresponda.
+tupla_05 = ('Victoria', 20)
+print("tupla_05[1] -->", tupla_05[1])
+
 # 6. Hacer una lista con 5 nombres, y realizar las siguientes actividades con la misma:
 """
 a. Cambiar el último elemento de la lista y cambiar el último nombre por “Juan”. Olvidándonos de que sabemos que tiene 5 elementos, ¿Cómo podría saber cuál es el último elemento si no sé la longitud?

@@ -112,5 +112,56 @@ for i in range(len(pal)):
 # RTA: Opcion 4 ✅
 
 
+# ¿Qué muestra el siguiente programa?
+a=[1,3,0,2]
+b=['ana','pedro','luis','emilia','li']
+c=[]
+for num in a:
+        nom=b[num]
+        c.append(len(nom)//2)
+print(c)
+# RTA: Opcion 4 - [2, 3, 1, 2] ✅
+
+# 0707 ¿Qué programa ejecuta más veces el cuerpo del bucle?
+# Desde 10, hasta 0 sin incluirlo. De a paso -5. Solo entra 2 veces al bucle 10, 5
+for i in range(len('mamarracho'),0,-5):
+        j=0
+        print(i) # 10 - 5
+# Ejecuta 5 veces
+for i in [1,2,6,7,8]:
+        j=0
+
+# lo ejecuta 1 sola vez
+i=100
+j=2
+while j>0:
+        j-=3
+
+# 9 veces ejecuta. me confundio el 'car'
+for car in 'argentina':
+        i=0
 
 
+# 0807 ¿Qué función es adecuada para el siguiente programa?
+# """
+def cociente(n1,n2):
+        if n1==0:
+         resultado=0
+        else:
+         resultado=n2/n1
+         return resultado
+
+lista=[10,0,100]
+factor=[5,6,4]
+for i in range(len(lista)):
+        print(cociente(lista[i],factor[i]))
+# """
+# Debe mostrar la siguiente salida:
+# 0.5
+# 0
+# 0.04
+
+
+a = 1
+a += 2
+print("aaaaa ", (a ))
