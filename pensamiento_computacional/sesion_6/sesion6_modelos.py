@@ -165,3 +165,6 @@ for i in range(len(lista)):
 a = 1
 a += 2
 print("aaaaa ", (a ))
+
+print('hola[-1]')
+print('hola'[-1])
