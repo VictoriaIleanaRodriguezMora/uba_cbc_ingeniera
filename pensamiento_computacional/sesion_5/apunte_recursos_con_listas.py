@@ -186,10 +186,12 @@ print(" Python ".strip())
 print("Hello, World!".replace("Hello", "Hi"))
 
 # split([separador]) Devuelve una lista de substrings separados por "separador".
-print("apple,banana,grape".split(","))
+print("- split ")
+print("apple,banana,grape".split(",")) # ['apple', 'banana', 'grape']
 
 # join(iterable) Devuelve un string que es la concatenación de los elementos en el iterable.
-print(",".join(["apple", "banana", "grape"]))
+print("- join ")
+print(",".join(["apple", "banana", "grape"])) # apple,banana,grape
 
 # isdigit() Devuelve True si todos los caracteres son dígitos.
 print("12345".isdigit())
