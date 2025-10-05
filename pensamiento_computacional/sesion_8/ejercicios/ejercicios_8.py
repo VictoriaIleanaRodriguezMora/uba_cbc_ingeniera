@@ -11,7 +11,7 @@ Entonces el archivo debería quedar de la forma:
 # Escritura = empieza a escribir desde el comienzo del archivo. Pisa caracter por caracter del contenido previo.
 # Si leo y escribo, empieza a escribir desde el final, porque al leer, el puntero queda en el final-.
 
-# """
+"""
 ej_01_file = open('pensamiento_computacional/sesion_8/ejercicios/pregunta.txt', 'r+', encoding='utf-8')
 lines_ej_01_file = ej_01_file.readlines() # array donde cada posicion es una linea del archivo
 print(lines_ej_01_file)
@@ -24,7 +24,7 @@ rta_user = input(lines_limpio_ej_01)
 print("rta_user", rta_user)
 
 ej_01_file.write(rta_user + '\n')
-# """
+"""
 
 # 2. En un archivo llamado regalo.txt se tiene la lista de las personas que quieren participar en el regalo de cumpleaños de Sol (en cada línea está el nombre de una persona). El encargado de organizar el regalo es Ale, y quiere saber más información antes de ir a comprarle algo a Sol.
 # a. Mostrar por pantalla los nombres de las personas que quieren participar en el regalo.
@@ -40,7 +40,7 @@ La función tiene que devolver 5000
 
 # c. Tomi sabe que si participa Santi, también participa Tomi. Se pide que si Santi está en el archivo de los nombres, se agregue también a Tomi.
 
-# """
+"""
 ej_02_file = open('pensamiento_computacional/sesion_8/ejercicios/regalo.txt', 'r+', encoding='utf-8')
 lines_ej_02_file = ej_02_file.readlines() # array donde cada posicion es una linea del archivo
 print(lines_ej_02_file) # ['Agus\n', 'Manu\n', 'Santi\n', 'Lorena\n', 'Maria']
@@ -62,10 +62,11 @@ for persona in personas_que_participan_en_el_regalo:
     print(persona)
 
 print(f"Presupuesto total: ${(len(personas_que_participan_en_el_regalo) * 1000)}")
-# """
+"""
 
 
-# 3. En un hogar se quieren organizar mejor con las compras, por lo que se quiere guardar en un archivo la lista de productos que se necesitan para la próxima vez que la familia vaya al supermercado. Se pide hacer un programa que cree un archivo de compras.txt (Ayuda: abrir el archivo en modo w) y le pregunte al usuario qué necesita comprar hasta que ingrese una X. Por ejemplo:
+# 3. En un hogar se quieren organizar mejor con las compras, por lo que se quiere guardar en un archivo la lista de productos que se necesitan para la próxima vez que la familia vaya al supermercado. 
+# Se pide hacer un programa que cree un archivo de compras.txt (Ayuda: abrir el archivo en modo w) y le pregunte al usuario qué necesita comprar hasta que ingrese una X. Por ejemplo:
 """
 > ¿Qué agrego a la lista de compras?
 > Papa
@@ -81,6 +82,19 @@ Papa
 Pollo
 Fideos
 """
+
+ej_03_file = open('pensamiento_computacional/sesion_8/ejercicios/compras.txt', 'a', encoding='utf-8')
+lista_de_compras = [];
+item_a_agregar = input('> ¿Qué agrego a la lista de compras? ');
+lista_de_compras.append(item_a_agregar + '\n')
+
+while(item_a_agregar != 'X'):
+        item_a_agregar = input('*> ¿Qué agrego a la lista de compras? ')
+        if(item_a_agregar != 'X'):
+            lista_de_compras.append(item_a_agregar + '\n')
+
+ej_03_file.writelines(lista_de_compras)
+   
 
 
 # 4. Se tiene un archivo con el siguiente texto:
