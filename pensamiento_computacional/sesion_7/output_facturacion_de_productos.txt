@@ -1,0 +1,57 @@
+Ingrese código, 0 para terminar: 11
+Descripción de 11: velitas
+desc  velitas
+Unidad de Medida de velitas: unid
+unidad  unid
+Precio unitario de velitas: 32.5
+precio  32.5
+{11: ('velitas', 'unid', 32.5)}  
+Ingrese código, 0 para terminar: 25
+Descripción de 25: azúcar
+desc  azúcar
+Unidad de Medida de azúcar: gr
+unidad  gr
+Precio unitario de azúcar: 0.65
+precio  0.65
+{11: ('velitas', 'unid', 32.5), 25: ('azúcar', 'gr', 0.65)}
+Ingrese código, 0 para terminar: 33
+Descripción de 33: dulce
+desc  dulce
+Unidad de Medida de dulce: kg
+unidad  kg
+Precio unitario de dulce: 85.7
+precio  85.7
+{11: ('velitas', 'unid', 32.5), 25: ('azúcar', 'gr', 0.65), 33: ('dulce', 'kg', 85.7)}  
+Ingrese código, 0 para terminar: 12
+Descripción de 12: blonda
+desc  blonda
+Unidad de Medida de blonda: unid
+unidad  unid
+Precio unitario de blonda: 22.75
+precio  22.75
+{11: ('velitas', 'unid', 32.5), 25: ('azúcar', 'gr', 0.65), 33: ('dulce', 'kg', 85.7), 12: ('blonda', 'unid', 22.75)}
+Ingrese código, 0 para terminar: 0
+
+11 velitas unid 32.5
+11 ('velitas', 'unid', 32.5)
+
+25 azúcar gr 0.65
+25 ('azúcar', 'gr', 0.65)
+
+33 dulce kg 85.7
+33 ('dulce', 'kg', 85.7)
+
+12 blonda unid 22.75
+12 ('blonda', 'unid', 22.75)
+¿Qué lleva? 0 para salir: 10
+¿Qué lleva? 0 para salir: 11
+Cantidad de velitas: 8
+productos[cgo][0] velitas
+total 260.0
+¿Lleva algo más? 0 para salir: 12
+Cantidad de blonda: 3
+productos[cgo][0] blonda
+total 328.25
+¿Lleva algo más? 0 para salir: 0
+Debe abonar: $328.25
+Debe abonar: $328.25

@@ -19,15 +19,18 @@ print(txt.capitalize())
 # LA INFORMACIÓN pública correcta para ese envío no debería haber sido más que una
 
 # Facturación de Productos | cgo - codigo
-# """
+"""
 productos = {}
 
 cgo = int(input('Ingrese código, 0 para terminar: '))
 while cgo != 0:
     if cgo not in productos:
         desc = input('Descripción de %d: ' % cgo)
+        print('desc ', desc) # velitas
         unidad = input('Unidad de Medida de %s: ' % desc)
+        print('unidad ', unidad) # unid
         precio = float(input('Precio unitario de %s: ' % desc))
+        print('precio ', precio) # 32.5
         productos[cgo] = (desc, unidad, precio) 
         print(productos) # {11: ('v', 'unid', 32.5)}
         # 2da vez - {11: ('v', 'unid', 32.5), 25: ('a', 'gr', 0.65)}
@@ -57,12 +60,13 @@ while cgo != 0:
     print("total", total)
     cgo = int(input('¿Lleva algo más? 0 para salir: '))
     # Mientras el código ingresado no exista en el diccionario productos y no sea 0, sigue pidiéndolo, entra al bucle de la línea 52 finalizado este.
-    while cgo not in productos and cgo != 0: # ¿Esta validación podría no estar ? mepa que no
-        cgo = int(input('¿Qué lleva? 0 para salir: '))
+    while cgo not in productos and cgo != 0: # ESTE WHILE ¿Esta validación podría no estar ? mepa que no
+        cgo = int(input('¿Qué más lleva? 0 para salir: '))
 
 # %.2f - formatea a 2 decimales
 print('Debe abonar: $%.2f' % total, sep='')
-# """
+print('Debe abonar: $%.2f' % total)
+"""
 
 
 
@@ -78,7 +82,8 @@ while nomPlato != '*':
         print('Dificultad:')
         for i in range(1, len(dificultad)):
             print('%d - %s' % (i, dificultad[i]))
-        opc = int(input())
+        opc = int(input()) # 1, 2, 3
+        # si ingreso 5, me vuelve al while
         if opc not in range(1, len(dificultad)):
             opc = 0
 
@@ -90,6 +95,33 @@ for p in platos:
     print(*p)
 """
 
+# """
+# traducción de opciones de menú usando diccionarios
+"""
+dificultad = {1: 'Alta', 2: 'Media', 3: 'Baja'}
+platos = []
+
+nomPlato = input('Ingresá un plato, * para salir: ')
+while nomPlato != '*':
+    opc = 0
+    while opc == 0:
+        print('Dificultad:')
+        for i in dificultad:
+            print('%d -' % i, dificultad[i])
+        opc = int(input('Elegí una opción: '))
+        if opc not in dificultad:
+            opc = 0
+
+    platos.append([nomPlato, dificultad[opc]])
+    nomPlato = input('Ingresá un plato, * para salir: ')
+
+print('\nLista de Platos:')
+for p in platos:
+    print(*p)
+
+"""
+
+# Datos de Clientes
 """
 dicci = {}
 print('Datos de Clientes, * para terminar')
@@ -108,26 +140,30 @@ for pers in dicci:
     print(pers, dicci[pers][0], dicci[pers][1], dicci[pers][2])
 """
 
-
-"""
+# Pero ¿Y si en realidad queremos ver toda la información, pero ordenada por el valor de la clave?
+# """
 dicci = {}
 print('Datos de Clientes, * para terminar')
 
-dni = input('DNI: ')
-while dni != '*':
+dni = input('DNI: ') 
+while dni != '*': # pide dni cuando ya tiene todos los otros datos, seria cuando cargas una nueva persona 
     nom = input('Nombre: ')
     ape = input('Apellido: ')
     edad = int(input('Edad: '))
     while edad not in range(18, 130):
         edad = int(input('Edad (entre 18 y 130): '))
     dicci[dni] = [nom, ape, edad]
+    print("dicci ",dicci) # {'18023569': ['A', 'G', 56], '17895822': ['M', 'S', 66]}
     dni = input('DNI: ')
 
-dicciOrden = sorted(dicci)
+# aplicando la función sorted a un diccionario devuelve una lista con las claves ordenadas. SOLO CON LAS CLAVES, no su contenido ordenado
+dicciOrden = sorted(dicci) #  ['17895822', '18023569']
+print("dicciOrden ",dicciOrden)
 
 for pers in dicciOrden:
+    # pers es el DNI, pq son las claves de dicci
     print(pers, dicci[pers][0], dicci[pers][1], dicci[pers][2])
-"""
+# """
 
 
 
