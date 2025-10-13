@@ -1,12 +1,12 @@
 """
-def sacaAcen(t): 
-    con='áéíóú' 
-    sin='aeiou' 
+def sacaAcen(t):
+    con='áéíóú'
+    sin='aeiou'
     # Arma el diccionario traductor transacción.
-    traductor= str.maketrans(con, sin) 
+    traductor= str.maketrans(con, sin)
     '''Aplica la traducción con el La informacion publica correcta para
     Mapeo de traductor á será ese envio no deberia haber sido mas
-    cambiada por a, é por e''' 
+    cambiada por a, é por e'''
     return t.translate(traductor)
 #PPal
 txt=input('Ingresá un texto: ')
@@ -14,7 +14,6 @@ txt=sacaAcen(txt.lower())
 print('Texto sin acentos')
 print(txt.capitalize())
 """
-
 
 # LA INFORMACIÓN pública correcta para ese envío no debería haber sido más que una
 
@@ -67,7 +66,6 @@ while cgo != 0:
 print('Debe abonar: $%.2f' % total, sep='')
 print('Debe abonar: $%.2f' % total)
 """
-
 
 
 # Traducción de opciones de menú usando tuplas
@@ -143,27 +141,26 @@ for pers in dicci:
 # Pero ¿Y si en realidad queremos ver toda la información, pero ordenada por el valor de la clave?
 # """
 dicci = {}
-print('Datos de Clientes, * para terminar')
+print("Datos de Clientes, * para terminar")
 
-dni = input('DNI: ') 
-while dni != '*': # pide dni cuando ya tiene todos los otros datos, seria cuando cargas una nueva persona 
-    nom = input('Nombre: ')
-    ape = input('Apellido: ')
-    edad = int(input('Edad: '))
+dni = input("DNI: ")
+while (
+    dni != "*"
+):  # pide dni cuando ya tiene todos los otros datos, seria cuando cargas una nueva persona
+    nom = input("Nombre: ")
+    ape = input("Apellido: ")
+    edad = int(input("Edad: "))
     while edad not in range(18, 130):
-        edad = int(input('Edad (entre 18 y 130): '))
+        edad = int(input("Edad (entre 18 y 130): "))
     dicci[dni] = [nom, ape, edad]
-    print("dicci ",dicci) # {'18023569': ['A', 'G', 56], '17895822': ['M', 'S', 66]}
-    dni = input('DNI: ')
+    print("dicci ", dicci)  # {'18023569': ['A', 'G', 56], '17895822': ['M', 'S', 66]}
+    dni = input("DNI: ")
 
 # aplicando la función sorted a un diccionario devuelve una lista con las claves ordenadas. SOLO CON LAS CLAVES, no su contenido ordenado
-dicciOrden = sorted(dicci) #  ['17895822', '18023569']
-print("dicciOrden ",dicciOrden)
+dicciOrden = sorted(dicci)  #  ['17895822', '18023569']
+print("dicciOrden ", dicciOrden)
 
 for pers in dicciOrden:
     # pers es el DNI, pq son las claves de dicci
     print(pers, dicci[pers][0], dicci[pers][1], dicci[pers][2])
 # """
-
-
-
