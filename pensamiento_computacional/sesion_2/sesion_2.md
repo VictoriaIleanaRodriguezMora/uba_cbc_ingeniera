@@ -45,3 +45,5 @@ La mayoria de las veces queremos que la función nos devuelva un valor, para usa
 
 Las funciones permiten recibir muchos valores, pero tambien devolver muchos valores
 
+![alt text](/img/image.png)
+https://medium.com/@rishu__2701/this-article-will-teach-you-about-operator-precedence-and-associativity-in-python-ee455c7fbfee
