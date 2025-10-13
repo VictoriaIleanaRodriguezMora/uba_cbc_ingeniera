@@ -138,7 +138,7 @@ miLista.clear()
 copia = miLista.copy()
 
 # max() Devuelve el valor máximo de la lista. 
-# maximo = max(miLista)
+maximo = max(miLista)
 
 # min() Devuelve el valor mínimo de la lista. 
 #minimo = min(miLista)

@@ -12,8 +12,8 @@ Hasta ahora sabemos cómo crear programas que trabajen con variables, estructura
 
 ### La ruta relativa es 'Desktop/VICKY/VICKY_TAREAS/UBA/uba_cbc_ingenieria'
 La ruta de la que la funcion open parte, es 'Desktop/VICKY/VICKY_TAREAS/UBA/uba_cbc_ingenieria'. Por eso debo especificar la ruta del archivo, a partir de esta.
-![La ruta de la que la funcion open parte, es 'Desktop/VICKY/VICKY_TAREAS/UBA/uba_cbc_ingenieria'](image.png)
-![Estructura de carpetas](image-1.png)
+![La ruta de la que la funcion open parte, es 'Desktop/VICKY/VICKY_TAREAS/UBA/uba_cbc_ingenieria'](/video/img/image.png)
+![Estructura de carpetas](/video/img/image-1.png)
 
 # /n
 - El caracter /n es, genera un salto de línea. Es un caracter no visible. Cómo %20
