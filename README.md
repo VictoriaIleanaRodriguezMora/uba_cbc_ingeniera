@@ -18,5 +18,3 @@ const findMe = {
   }
 ```
 
-![alt text](/img/image.png)
-https://medium.com/@rishu__2701/this-article-will-teach-you-about-operator-precedence-and-associativity-in-python-ee455c7fbfee
