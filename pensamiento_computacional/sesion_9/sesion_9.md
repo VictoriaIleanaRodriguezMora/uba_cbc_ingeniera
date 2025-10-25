@@ -1,0 +1,2 @@
+- https://stackoverflow.com/questions/39465094/how-can-i-raise-an-error-if-input-is-nan
+- https://www.turing.com/kb/nan-values-in-python

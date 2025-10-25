@@ -1,8 +1,7 @@
 # GUIA DE EJERCICIOS Nº7 – Manejo de errores
 
 # ============================================================
-# 1. Se quiere hacer un programa para pedirle al usuario que ingrese un número entero,
-# y en caso de que el valor ingresado no sea un número entero, mostrarle un mensaje apropiado.
+# 1. Se quiere hacer un programa para pedirle al usuario que ingrese un número entero, y en caso de que el valor ingresado no sea un número entero, mostrarle un mensaje apropiado.
 """
 a) Realizarlo utilizando isnumeric().
    → isnumeric() sirve solo para strings que contienen dígitos (no acepta negativos ni decimales).
@@ -11,6 +10,20 @@ b) Realizarlo utilizando try / except para capturar errores al convertir a int.
 """
 # ============================================================
 
+""" 
+num_user = input('1. Ingrese un numero entero: ')
+while type(num_user) is not int:
+   try: 
+      print('- Try')
+      num_user = input('2. Usd no ingresó un numero entero, porfavor ingrese uno: ')
+      # if(num_user):
+      num_user = int(num_user)
+      # print("num_d ", num_d)
+
+   except ValueError: # Poner ValueError o nada es lo mismo
+      print('- Except')
+      print('3. El valor ingresado no es válido')
+"""
 
 # ============================================================
 # 2. Crear una función (usando el punto anterior) que le pida al usuario un número entero.
@@ -22,18 +35,82 @@ Ingrese el segundo número: 3
 Resultado: 15
 """
 # ============================================================
+""" 
+def ej_02(num_a, num_b):
+   while (type(num_a) is not int) or (type(num_b) is not int):
+      try: 
+         print('🟡 Try')
+         if(type(num_a) is not int):
+            num_a = input('1. El primer nro que ingresó no era entero, porfavor ingrese uno: ')
+         if(type(num_b) is not int):
+            num_b = input('2. El segundo nro que ingresó no era entero, porfavor ingrese uno: ')
 
+         num_a = int(num_a)
+         num_b = int(num_b)
+
+      except ValueError: # Poner ValueError o nada es lo mismo
+         print('🔴 Except')
+         print('3. Uno de los valores ingresados no es válido')
+
+# Inicialmente hice esto 🔽, pero esto solo funciona, si lo primero que obtiene es un no int, porque entonces ENTRA al while. Pero si ambos son int, nunca entra al while, entonces nunca entra al else
+      # else: # else se ejecuta si no ocurrre ningún error en try
+      #    print('🟢 else')
+      #    print(f"{num_a} * {num_b}: {num_a * num_b}")
+      #    return num_a * num_b
+
+   print(f"✅ finalizado el while, significa que no hubo errores en try")
+   print(f"{num_a} * {num_b}: {num_a * num_b}")
+   return num_a * num_b
+ej_02("h", 3)
+ej_02(5, 3)
+"""
 
 # ============================================================
-# 3. Programa que solicite al usuario un número divisor y un dividendo,
-# y calcule el cociente entre ellos.
+# 3. Programa que solicite al usuario un número divisor y un dividendo, y calcule el cociente entre ellos.
 """
 Ayuda:
 - Considerar que el usuario podría ingresar un valor no numérico.
 - También podría ingresar un divisor igual a 0 → debe manejarse el error de división.
 """
 # ============================================================
+"""
+def ej_03(num_a, num_b):
+   while (type(num_a) is not int) or (type(num_b) is not int) or (num_b == 0): 
+      try: 
+         print('🟡 Try')
+         if(type(num_a) is not int):
+            num_a = input('1. El primer nro que ingresó no era entero, porfavor ingrese uno: ')
+         if(type(num_b) is not int):
+            num_b = input('2. El segundo nro que ingresó no era entero, porfavor ingrese uno: ')
+         if(num_b == 0):
+            num_b = input('3. El dividendo no puede ser cero, porfavor ingrese un entero distinto')
 
+         num_a = int(num_a)
+         num_b = int(num_b)
+
+      except ValueError: # Poner ValueError o nada es lo mismo
+         print('🔴 Except ValueError')
+         print('4. Uno de los valores ingresados no es válido')
+
+      except ZeroDivisionError:
+         print('🔴 Except ZeroDivisionError')
+
+
+   print(f"✅ finalizado el while, significa que no hubo errores en try")
+   print(f"🔢 {num_a} / {num_b}: {num_a / num_b}")
+   return num_a / num_b
+
+ej_03(6, 3)
+ej_03("h", 3)
+ej_03(5, "k")
+ej_03(10, 0)
+ej_03("x", "y")
+ej_03(4, "0")
+ej_03(4.7, 2.0)
+ej_03("8", "2")
+ej_03("a", "b")
+ej_03(5, 0)
+"""
 
 # ============================================================
 # 4. Crear un programa para abrir un archivo llamado “file.txt” en modo lectura.
@@ -44,6 +121,7 @@ Ayuda:
 → Usar try / except con FileNotFoundError.
 """
 # ============================================================
+
 
 
 # ============================================================
