@@ -94,6 +94,7 @@ for p in platos:
 """
 
 # """
+
 # traducción de opciones de menú usando diccionarios
 """
 dificultad = {1: 'Alta', 2: 'Media', 3: 'Baja'}

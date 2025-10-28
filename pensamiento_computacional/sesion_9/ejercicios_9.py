@@ -1,7 +1,7 @@
 # GUIA DE EJERCICIOS Nº7 – Manejo de errores
 
 # ============================================================
-# 1. Se quiere hacer un programa para pedirle al usuario que ingrese un número entero, y en caso de que el valor ingresado no sea un número entero, mostrarle un mensaje apropiado.
+# ✅ 1. Se quiere hacer un programa para pedirle al usuario que ingrese un número entero, y en caso de que el valor ingresado no sea un número entero, mostrarle un mensaje apropiado.
 """
 a) Realizarlo utilizando isnumeric().
    → isnumeric() sirve solo para strings que contienen dígitos (no acepta negativos ni decimales).
@@ -10,7 +10,7 @@ b) Realizarlo utilizando try / except para capturar errores al convertir a int.
 """
 # ============================================================
 
-""" 
+# """ 
 num_user = input('1. Ingrese un numero entero: ')
 while type(num_user) is not int:
    try: 
@@ -23,10 +23,12 @@ while type(num_user) is not int:
    except ValueError: # Poner ValueError o nada es lo mismo
       print('- Except')
       print('3. El valor ingresado no es válido')
-"""
-
+# """
 # ============================================================
-# 2. Crear una función (usando el punto anterior) que le pida al usuario un número entero.
+
+print("============================================================")
+
+# ✅ 2. Crear una función (usando el punto anterior) que le pida al usuario un número entero.
 # Utilizarla para calcular el producto entre dos números enteros ingresados.
 """
 Ejemplo:
@@ -34,8 +36,9 @@ Ingrese el primer número: 5
 Ingrese el segundo número: 3
 Resultado: 15
 """
+
 # ============================================================
-""" 
+# """ 
 def ej_02(num_a, num_b):
    while (type(num_a) is not int) or (type(num_b) is not int):
       try: 
@@ -63,17 +66,19 @@ def ej_02(num_a, num_b):
    return num_a * num_b
 ej_02("h", 3)
 ej_02(5, 3)
-"""
-
+# """
 # ============================================================
-# 3. Programa que solicite al usuario un número divisor y un dividendo, y calcule el cociente entre ellos.
+
+print("============================================================")
+
+# ✅ 3. Programa que solicite al usuario un número divisor y un dividendo, y calcule el cociente entre ellos.
 """
 Ayuda:
 - Considerar que el usuario podría ingresar un valor no numérico.
 - También podría ingresar un divisor igual a 0 → debe manejarse el error de división.
 """
 # ============================================================
-"""
+# """
 def ej_03(num_a, num_b):
    while (type(num_a) is not int) or (type(num_b) is not int) or (num_b == 0): 
       try: 
@@ -110,10 +115,12 @@ ej_03(4.7, 2.0)
 ej_03("8", "2")
 ej_03("a", "b")
 ej_03(5, 0)
-"""
-
+# """
 # ============================================================
-# 4. Crear un programa para abrir un archivo llamado “file.txt” en modo lectura.
+
+print("============================================================")
+
+# ✅ 4. Crear un programa para abrir un archivo llamado “file.txt” en modo lectura.
 # En caso de que este archivo no exista, mostrar el mensaje:
 # “No se pudo encontrar el archivo file.txt”.
 """
@@ -121,12 +128,22 @@ Ayuda:
 → Usar try / except con FileNotFoundError.
 """
 # ============================================================
+# """
+def ej_04():
+   try:
+    # mi_archivo = open("file.txt","r") 
+     mi_archivo = open("pensamiento_computacional/sesion_9/file.txt","r") 
+     print("El archivo file.txt existe: ", mi_archivo)
 
-
-
+   except:
+      print("No se pudo encontrar el archivo file.txt")
+ej_04()
+# """
 # ============================================================
-# 5. Crear una función cuyos parámetros sean una lista y un índice de posición
-# para mostrar el valor de la lista en esa ubicación.
+
+print("============================================================")
+
+# ✅ 5. Crear una función cuyos parámetros sean una lista y un índice de posición  para mostrar el valor de la lista en esa ubicación.
 """
 a) ¿Qué ocurre si ingreso un índice fuera del rango?
    → Se genera un IndexError.
@@ -134,10 +151,24 @@ b) Si el índice está dentro del rango, mostrar el valor.
    Si está fuera, mostrar un mensaje apropiado.
 """
 # ============================================================
+# """
+def ej_05(indice, lista):
+    try:
+        rtado = lista[indice]
+        print("Ej 05: ", rtado)
+
+    except IndexError:
+        print("Usd no ingresó un índice válido")
 
 
+ej_05(5, ["a", "b", "c"])
+ej_05(1, ["a", "b", "c"])
+# """
 # ============================================================
-# 6. JUEGO DEL CHINCHÓN
+
+print("============================================================")
+
+# ✅ 6. JUEGO DEL CHINCHÓN
 # Para jugar con un único mazo de cartas españolas, el número de jugadores puede ser:
 # 2, 3 o 4.
 """
@@ -149,9 +180,51 @@ Crear una función que pida al usuario el número de jugadores y contemple estos
 """
 # ============================================================
 
+print("============================================================")
+
+# """
+def ej_06(num_j):
+    while (type(num_j) is not int) or (num_j < 2) or (num_j > 4):
+        try:
+            print("🟡 Try")
+            print("num_j", num_j)
+
+            if type(num_j) is not int:
+                num_j = int(
+                    input("No ingresó un numero, porfavor ingrese uno: ")
+                )
+
+            if (num_j) < 2:
+                num_j = int(
+                    input(
+                        ("Debe haber al menos 2 jugadores. Ingrese un nuevo numero: ")
+                    )
+                )
+
+            # num_j = int(num_j)
+
+            if (num_j) > 4:
+                num_j = int(
+                    input(
+                        ("Debe haber al menos 2 jugadores.  Ingrese un nuevo numero: ")
+                    )
+                )
+
+        except ValueError:  # Poner ValueError o nada es lo mismo
+            print("🔴 Except")
+            print("3. Uno de los valores ingresados no es válido")
+    print("🟢 Valor válido: ", num_j)
+
+
+ej_06(3)
+ej_06(1)
+ej_06("l")
+# """
+
+print("============================================================")
 
 # ============================================================
-# 7. JUEGO DEL TRUCO
+# ✅ 7. JUEGO DEL TRUCO
 # Para jugar con un único mazo de cartas españolas, el número de jugadores puede ser:
 # 2, 4 o 6.
 """
@@ -164,14 +237,58 @@ Crear una función que pida al usuario el número de jugadores y contemple:
 """
 # ============================================================
 
+# """
+def ej_06(num_j):
+    while (
+        (type(num_j) is not int) or (num_j < 2) or (num_j > 6) or (num_j % 2 != 0)
+    ):
+        try:
+            print("🟡 Try")
+            print("num_j", num_j)
+
+            if type(num_j) is not int:
+                num_j = int(input("No ingresó un numero, porfavor ingrese uno: "))
+
+            if (num_j) < 2:
+                num_j = int(
+                    input(
+                        ("Debe haber al menos 2 jugadores. Ingrese un nuevo numero: ")
+                    )
+                )
+
+            if (num_j) > 4:
+                num_j = int(
+                    input(
+                        ("Debe haber al menos 2 jugadores.  Ingrese un nuevo numero: ")
+                    )
+                )
+            if num_j % 2 is not 0:
+                num_j = int(
+                    input(
+                        (
+                            "Debe haber un número par de jugadores.  Ingrese un nuevo numero: "
+                        )
+                    )
+                )
+
+        except ValueError:  # Poner ValueError o nada es lo mismo
+            print("🔴 Except")
+            print("3. Uno de los valores ingresados no es válido")
+    print("🟢 Valor válido: ", num_j)
+
+ej_06(3)
+ej_06("l")
+# """
+
+print("============================================================")
 
 # ============================================================
-# 8. KIOSKO DE LA FACULTAD
+# ✅ 8. KIOSKO DE LA FACULTAD
 """
 El kiosko quiere automatizar un cartel que calcule el total a pagar según el producto.
 
 Se tienen dos diccionarios:
-opciones = {
+d_opciones = {
   1: "hamburguesas",
   2: "milanesas",
   3: "gaseosa",
@@ -204,4 +321,48 @@ Considerar posibles errores:
 """
 # ============================================================
 
+d_opciones = {
+    1: "hamburguesas",
+    2: "milanesas",
+    3: "gaseosa",
+    4: "alfajor",
+    5: "papas fritas",
+    6: "agua",
+}
 
+valores = {1: 1000, 2: 1500, 3: 500, 4: 300, 5: 600, 6: 350}
+
+def ej_06(cod_prod, cant):
+    while (
+        (type(cod_prod) is not int)
+        or (cod_prod not in d_opciones.keys())
+    ):
+        try:
+            print("🟡 Try")
+            print("cod_prod", cod_prod)
+
+            if type(cod_prod) is not int:
+                cod_prod = int(
+                    input("No ingresó un numero, porfavor ingrese un numero válido: ")
+                )
+
+            if cod_prod not in d_opciones.keys():
+                cod_prod = int(
+                    input(
+                        "El código ingresado no existe, porfavor ingrese un numero válido: "
+                    )
+                )
+
+            mi_clave = d_opciones[cod_prod]
+            print("🟢 Valor válido: mi_clave", mi_clave)
+        except:
+            print("🔴 Except")
+            print("3. Uno de los valores ingresados no es válido")
+
+    print("🟢 Valor válido cant: ", cant)
+    print("valores[cod_prod] * cant" , valores[cod_prod] * cant)
+    return valores[cod_prod] * cant
+
+
+ej_06(9, 3)
+# ej_06("l")
