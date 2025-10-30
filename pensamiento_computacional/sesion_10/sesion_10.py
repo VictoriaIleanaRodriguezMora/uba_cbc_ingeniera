@@ -1,6 +1,6 @@
 # GUIA DE EJERCICIOS Nº6 – Pandas
 import pandas as pd
-
+print(pd.__version__) # 2.3.3
 """
 Los siguientes ejercicios se pueden hacer en el siguiente link de Google Colab:
 https://colab.research.google.com/drive/1onufzB7CnauWQFHuMMrDQxXkevqCGeAj?usp=sharing

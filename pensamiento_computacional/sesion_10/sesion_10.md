@@ -6,6 +6,37 @@
 
 ![alt text](image.png)
 
+# Pandas
+Es una biblioteca. 
+Se utiliza para el análisis y la manipulación de datos. Ayuda a los usuarios a limpiar, transformar y analizar datos de una manera rápida y eficiente.
+La estructura de datos principal en Pandas se llama `DataFrame`. Es una tabla de datos bidimensional que se compone de filas y columnas, y se asemeja a una tabla relacional.
+
+## Filtrar filas: `df.iloc()` y `df.head()`
+```py
+# Devuelve las primeras (n) filas que se le pase por parametro
+# Si no se le pasa ningun valor, devuelve las primeras 5
+df.head(n)  
+
+
+df.iloc([desde:hasta:salteando])
+```
+
+## Filtrar filas y columnas `df.loc[[filas],[columnas]]`
+### IMPORTANTE, si no voy a filtrar ningún FILA, debo poner [:, [columnas]]
+```py
+df.loc[:,['nombre', 'año']]
+```
+
+# Indico filas y columnas
+### Para las filas: [desde:hasta:salteando]
+```py
+
+df.loc[[5, 8],['nombre', 'año']]
+
+# Esto tambien es válido
+df.loc[[5, 8]]
+
+```
 
 
 
