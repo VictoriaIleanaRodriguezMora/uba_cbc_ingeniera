@@ -17,7 +17,8 @@ La estructura de datos principal en Pandas se llama `DataFrame`. Es una tabla de
 # Si no se le pasa ningun valor, devuelve las primeras 5
 df.head(n)  
 
-
+# DESDE - SIN INCLUIR
+# HASTA - INCLUIDO
 df.iloc([desde:hasta:salteando])
 ```
 
